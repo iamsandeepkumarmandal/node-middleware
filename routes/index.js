@@ -2,11 +2,12 @@ var express = require('express');
 var router = express.Router();
 var Request = require('request');
 
-const APIENDPOINT = 'https://forums.dev.rummyfans.com/';
+const APIENDPOINT = process.env.API_END_POINT;
+
 const headersObj = { 
   'Accept': 'application/json',
-  'Api-Username': 'sandeep.sandeep.mand',
-  'Api-Key': '164980f0794040775d7ae2042a5e82b04b9166454c734166ae2cd3dc92eedf23'
+  'Api-Username': process.env.API_USER_NAME,
+  'Api-Key': process.env.API_KEY
 };
 
 /* GET home page. */
